@@ -1,0 +1,210 @@
+When you run one of the MetaDataDownloader classes, it will return a list that contains
+objects of type 'MediaFeedData'. This data type is defined by the jInstragram library.
+You can find the class at jinstagram.entity.users.feed.MediaFeedData.java.
+
+In that file, you will see that this data type includes the following:
+
+	private Caption caption;
+	private Comments comments;
+	private String createdTime;
+	private String id;
+	private String imageFilter;
+	private Images images;
+	private Videos videos;
+	private Likes likes;
+	private String link;
+	private Location location;
+	private List<String> tags;
+	public static final String TYPE_VIDEO = "video";
+	private String type;
+	private User user;
+	private boolean userHasLiked;
+
+There are getter methods for all of these. I haven't looked into what the non-primitive
+data types are about, but there will be a class for each somewhere in this library. The class
+will have the details for what objects it includes. Just keep drilling down until you get
+the information you need.
+
+Here is an example of a MediaFeedData object in JSON format
+{
+	"caption":{
+		"createdTime":"1415061447",
+		"from":{
+			"full_name":"BlackList",
+			"id":"14366541",
+			"profile_picture":"http://images.ak.instagram.com/profiles/profile_14366541_75sq_1387742822.jpg",
+			"username":"black_list"
+		},
+		"id":"845919188833278114",
+		"text":"Widebody Aventador! | Photo by @elliott_heigel | #blacklist #lamborghini #aventador"
+	},
+	"comments":{
+		"comments":[
+			{
+				"fromTagData":{
+					"full_name":"Nick Di Nardo",
+					"id":"228027035",
+					"profile_picture":"http://photos-h.ak.instagram.com/hphotos-ak-xaf1/10735375_292622174195151_1384164068_a.jpg",
+					"username":"nickgdinoo"
+				},
+				"createdTime":"1415068015",
+				"id":"845974291678239454",
+				"text":"@shayvalentino"
+			},
+			{
+				"fromTagData":{
+					"full_name":"old_vs_new_car",
+					"id":"1288930589",
+					"profile_picture":"http://images.ak.instagram.com/profiles/profile_1288930589_75sq_1398451658.jpg",
+					"username":"old_vs_new_car"
+				},
+				"createdTime":"1415068122",
+				"id":"845975189301238566",
+				"text":"Vist my acount for Old and new cars"
+			},
+			{
+				"fromTagData":{
+					"full_name":"Mark",
+					"id":"195864153",
+					"profile_picture":"http://photos-d.ak.instagram.com/hphotos-ak-xaf1/10665430_438648776273315_506865175_a.jpg",
+					"username":"markes_10"
+				},
+				"createdTime":"1415068173",
+				"id":"845975615861955400",
+				"text":"Wide body for the winnnnn"
+			},
+			{
+				"fromTagData":{
+					"full_name":"Ricky Garcia",
+					"id":"492187851",
+					"profile_picture":"http://photos-d.ak.instagram.com/hphotos-ak-xfa1/10684304_338284956339939_1454255658_a.jpg",
+					"username":"lilbeanergarcia"
+				},
+				"createdTime":"1415068287",
+				"id":"845976566257687454",
+				"text":"@im_eli_ definitely your kind of car!"
+			},
+			{
+				"fromTagData":{
+					"full_name":"Bennett dipzinski",
+					"id":"42704254",
+					"profile_picture":"http://photos-e.ak.instagram.com/hphotos-ak-xaf1/10723848_855343414509828_772705641_a.jpg",
+					"username":"bennettdip55"
+				},
+				"createdTime":"1415068300",
+				"id":"845976682867727274",
+				"text":"@livweav"
+			},
+			{
+				"fromTagData":{
+					"full_name":"Matt Brown",
+					"id":"36217609",
+					"profile_picture":"http://photos-e.ak.instagram.com/hphotos-ak-xaf1/10691623_500159346787212_1321755273_a.jpg",
+					"username":"matt_brown30"
+				},
+				"createdTime":"1415068321",
+				"id":"845976855236844468",
+				"text":"@chey_mason13"
+			},
+			{
+				"fromTagData":{
+					"full_name":"virg_k",
+					"id":"199056001",
+					"profile_picture":"http://images.ak.instagram.com/profiles/profile_199056001_75sq_1361330650.jpg",
+					"username":"virg_k"
+				},
+				"createdTime":"1415068449",
+				"id":"845977929490372609",
+				"text":"@lipaislam this is the same colour of the lambo I keep seeing! Saw him a few times last week."
+			},
+			{
+				"fromTagData":{
+					"full_name":"Elizabeth Sanchez",
+					"id":"194217100",
+					"profile_picture":"http://photos-h.ak.instagram.com/hphotos-ak-xaf1/915708_695073113907991_722097763_a.jpg",
+					"username":"im_eli_"
+				},
+				"createdTime":"1415068647",
+				"id":"845979587565852786",
+				"text":"Except I'd like mines a dark grey or red @lilbeanergarcia"
+			}
+		],
+		"count":141
+	},
+	"createdTime":"1415061447",
+	"id":"845919187482712221_14366541",
+	"imageFilter":"Normal",
+	"images":{
+		"lowResolution":{
+			"imageHeight":306,
+			"imageUrl":"http://scontent-b.cdninstagram.com/hphotos-xaf1/t51.2885-15/10787871_743134435774333_325953284_a.jpg",
+			"width":306
+		},
+		"standardResolution":{
+			"imageHeight":640,
+			"imageUrl":"http://scontent-b.cdninstagram.com/hphotos-xaf1/t51.2885-15/10787871_743134435774333_325953284_n.jpg",
+			"width":640
+		},
+		"thumbnail":{
+			"imageHeight":150,
+			"imageUrl":"http://scontent-b.cdninstagram.com/hphotos-xaf1/t51.2885-15/10787871_743134435774333_325953284_s.jpg",
+			"width":150
+		}
+	},
+	"videos":{
+		},
+	"likes":{
+		"count":24170,
+		"likesUserList":[
+			{
+				"bio":null,
+				"fullName":"Cristhian Douglas(Zyzz)",
+				"id":"272840344",
+				"profile_picture":"http://photos-f.ak.instagram.com/hphotos-ak-xaf1/10729426_305226496334605_1709086143_a.jpg",
+				"userName":"cristhiandouglas",
+				"website":null
+			},
+			{
+				"bio":null,
+				"fullName":"Che Beatmaker",
+				"id":"198698345",
+				"profile_picture":"http://photos-e.ak.instagram.com/hphotos-ak-xaf1/10570125_1446065552345644_255514965_a.jpg",
+				"userName":"kingchethegreat",
+				"website":null
+			},
+			{
+				"bio":null,
+				"fullName":"Nicole Armstrong ?",
+				"id":"176736276",
+				"profile_picture":"http://photos-h.ak.instagram.com/hphotos-ak-xfa1/10725083_1534542666781423_350029862_a.jpg",
+				"userName":"niarmstrong",
+				"website":null
+			},
+			{
+				"bio":null,
+				"fullName":"josh inderias",
+				"id":"184389381",
+				"profile_picture":"http://images.ak.instagram.com/profiles/profile_184389381_75sq_1397655137.jpg",
+				"userName":"j_inderias23",
+				"website":null
+			}
+		]
+	},
+	"link":"http://instagram.com/p/u9TwTmmBid/",
+	"location":{
+	},
+	"tags":{
+		"tags":[
+		]
+	},
+	"type":"image",
+	"user":{
+		"bio":"",
+		"fullName":"BlackList",
+		"id":"14366541",
+		"profile_picture":"http://images.ak.instagram.com/profiles/profile_14366541_75sq_1387742822.jpg",
+		"userName":"black_list",
+		"website":""
+	},
+	"user_has_liked":"0"
+}

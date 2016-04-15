@@ -1,0 +1,31 @@
+There are a few different Instagram APIs out there for Java. It seems that the most recent one is called jInstragram (https://github.com/sachin-handiekar/jInstagram). I have no idea if it is better or worse than any of the others.
+
+Getting it to work with our project was a pain, but I think that I got there. If you are good at this kind of thing, you might not need these instructions, but I thought I would write this down in case it can save you time. You won’t be able to use the Instagram Java API until you get this set up correctly. I can try to help if this doesn’t work. 
+
+These steps assume that you have already set up your CSCI5828.PhotoApp project in Eclipse and checked out the repository from GitHub (https://github.com/reastland/CSCI5828PhotoApp). 
+
+You need to install three external jar files. I’ve downloaded them all and they can be found in this Drive folder in the directory GitHub Libraries.
+
+jInstagram-master
+scribe-java-master
+gson-2.3
+
+The first two need to be compiled first. Here is how to do that (assumes that you have Maven installed). I created a folder called \libs (C:\libs) where I stored everything.:
+
+Copy the two zip files and the gson-2.3.jar file to this folder.
+Extract the two zip files.
+Open a terminal
+For each of the two that you extracted the zip files:
+Navigate to those folders so that you are immediately inside of it.
+type “mvn package”
+Note: this is how I did it. There are probably other ways (like ‘mvn compile’) that might work, so if you have a better way, use it.
+This created a bunch of jar files. We have to add two of them to the project libraries.
+/libs/jInstragram-master/target/jInstagram-1.1.0-SNAPSHOT.jar
+/libs/gson-2.3.jar
+In Eclipse, right click on the project at the top of the Project Navigator pane. Select Properties.
+Click on the Libraries tab
+Click on Add External JARs
+Select both of those jar files
+
+
+
